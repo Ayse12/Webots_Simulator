@@ -1,0 +1,201 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.5078529439087506 -0.8271393136347196 -0.24067809040936908 5.2684858734610485
+  position 1.2912081787378131 1.1707201653548949 0.8389787816680212
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 1.5 1.5
+  floorTileSize 0.25 0.25
+  wallHeight 0.2
+}
+WoodenBox {
+  translation -0.26034129725695127 0.09960766036212439 0.400014456339868
+  rotation -2.2124987539657688e-06 0.9999999999975272 -2.2434743694534482e-07 -3.9765354382882885e-05
+  size 0.2 0.2 0.2
+  mass 1
+}
+WoodenBox {
+  translation 0.3023914396294484 0.0996075999344487 0.39998736770160614
+  rotation -0.0007386514407238343 0.9999997271324209 1.1363677830750926e-05 -6.245176816465432e-05
+  name "wooden box(1)"
+  size 0.2 0.2 0.2
+  mass 1
+}
+WoodenBox {
+  translation -0.23750959076610126 0.09960766036221746 -0.5184333392858247
+  rotation 6.019525581436065e-12 1 -1.0160745863987569e-11 -0.004240753262266655
+  name "wooden box(2)"
+  size 0.2 0.2 0.2
+  mass 1
+}
+E-puck {
+  hidden position_0_0 521.4584739618941
+  hidden position_0_1 600.713928208164
+  hidden linearVelocity_0 -0.03262535840378946 9.678049039494857e-08 0.04580537492293331
+  hidden angularVelocity_0 0.009250841660831477 0.08962010303807962 0.006579085875202104
+  hidden translation_1 -0.025999999999999995 0.02 0
+  hidden rotation_1 -1 0 0 6.237278773168037
+  hidden linearVelocity_1 -0.0313059202597236 -1.3703709663633728e-07 0.043953649604337675
+  hidden angularVelocity_1 2.1889963043750753 0.09134700555237682 1.5589932795865176
+  hidden translation_2 0.025999999999999992 0.02 0
+  hidden rotation_2 0.9999999999999999 0 0 2.4718612810762814
+  hidden linearVelocity_2 -0.034009941049705256 1.1584280087751474e-07 0.04775036496248165
+  hidden angularVelocity_2 2.3966921508764334 0.09161000699232272 1.7070475075259255
+  translation -0.3413144739001065 -6.430016558896766e-05 -0.022044709929823953
+  rotation -0.0002806395461921456 0.9999997286485791 0.000681134504531919 2.5243733261571175
+}
+Robot {
+  translation -8.038886026151258e-07 0.03971991565930439 -8.28620493731018e-12
+  rotation 1.0142375048343748e-07 2.8597684751579984e-09 0.9999999999999949 1.957526510111303e-05
+  children [
+    DEF Body Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.05 0.2
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.401760485464365e-09
+        anchor 0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0 0.05
+        rotation -7.014385947943438e-10 7.008802427321826e-10 1 1.57
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel1"
+        boundingObject USE Wheel
+        physics DEF Physics_wheel Physics {
+        }
+        linearVelocity -3.330812343419909e-09 8.237049332334798e-06 -5.547513779454413e-10
+        angularVelocity -1.3871112568046408e-08 3.2064188607940193e-12 8.319445456278971e-08
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.4002008441593716e-09
+        anchor -0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 0 0.05
+        rotation -7.006581529023787e-10 7.001004220796858e-10 1 1.57
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel2"
+        boundingObject USE Wheel
+        physics DEF Physics_wheel Physics {
+        }
+        linearVelocity -3.324735379392316e-09 8.227229433802675e-06 -5.54190229348444e-10
+        angularVelocity -1.3855468795450945e-08 3.2067265900695417e-12 8.319470017123714e-08
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.40176098684982e-09
+        anchor 0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0 -0.05
+        rotation -7.014388456867841e-10 7.008804934249101e-10 1 1.57
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel3"
+        boundingObject USE Wheel
+        physics DEF Physics_wheel Physics {
+        }
+        linearVelocity -3.330920582696996e-09 8.237061493047127e-06 -5.547515252095431e-10
+        angularVelocity -1.387111700638403e-08 3.2064191701799902e-12 8.319447078764429e-08
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.4002017323377913e-09
+        anchor -0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 0 -0.05
+        rotation -7.006585973453695e-10 7.001008661688957e-10 1 1.57
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel4"
+        boundingObject USE Wheel
+        physics DEF Physics_wheel Physics {
+        }
+        linearVelocity -3.32484340899059e-09 8.22724159414477e-06 -5.541904414593196e-10
+        angularVelocity -1.3855475123396387e-08 3.206727188762546e-12 8.319470700871662e-08
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+  linearVelocity -3.3246747121035223e-09 8.229726350655304e-06 -5.543745710688494e-10
+  angularVelocity 1.2404732641618576e-10 3.478660179450857e-12 8.318976066188336e-08
+}
